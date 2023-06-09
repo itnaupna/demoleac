@@ -5,12 +5,12 @@ import Lobby from "./Pages/Lobby";
 import Room from "./Pages/Room";
 
 function App() {
-  const [msg, setMsg] = useState("");
-  useEffect(() => {
-    fetch("/test")
-      .then((res) => res.json())
-      .then((res) => setMsg(res));
-  }, []);
+  // const [msg, setMsg] = useState("");
+  // useEffect(() => {
+  //   fetch("/test")
+  //     .then((res) => res.json())
+  //     .then((res) => setMsg(res));
+  // }, []);
 
   return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
       <hr />
       <Routes>
         <Route path="/" element={<Lobby />}></Route>
-        <Route path="/room/:roomName" element={<Room />}></Route>
+        <Route path="/room/:roomId" element={<Room />}></Route>
       </Routes>
     </div>
   );
